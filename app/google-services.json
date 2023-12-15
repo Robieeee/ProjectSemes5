@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "485445591145",
+    "firebase_url": "https://wandertrip-1e8e6-default-rtdb.firebaseio.com",
+    "project_id": "wandertrip-1e8e6",
+    "storage_bucket": "wandertrip-1e8e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485445591145:android:77ea96ad8844c43e3082f8",
+        "android_client_info": {
+          "package_name": "com.example.projectsemes5"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5EoDABR7nn2PKGr9cG4UscWJw3D6xJNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485445591145:android:50cddc3ce8c0fb4e3082f8",
+        "android_client_info": {
+          "package_name": "com.example.projectsemester5"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5EoDABR7nn2PKGr9cG4UscWJw3D6xJNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
