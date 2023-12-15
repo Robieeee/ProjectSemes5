@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hoteldetails2">
+
+    <ImageView
+        android:id="@+id/header_background"
+        android:layout_width="412dp"
+        android:layout_height="291dp"
+        android:transitionName="background_image_transition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/header_background"
+        tools:targetApi="TIRAMISU"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/down_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        app:layout_constraintEnd_toEndOf="@+id/header_background"
+        app:layout_constraintTop_toTopOf="@+id/header_background"
+        android:src="@drawable/ic_down_arrow" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/third_title"
+                android:layout_width="395dp"
+                android:layout_height="wrap_content"
+                android:text="Star Hotel, Casino &amp; SkyPod"
+                android:fontFamily="monospace"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/third_ratingbar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:max="5"
+                    android:numStars="5"
+                    android:progressTint="@color/colorAccent"
+                    android:rating="4.35"
+                    android:stepSize="0.5"
+                    android:progressBackgroundTint="@color/white"
+                    tools:targetApi="TIRAMISU" />
+
+                <TextView
+                    android:id="@+id/third_rating_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="4.35"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/third_rating_number2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="(673)"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="About"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/about_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:alpha="0.5"
+                android:text="An accommodation destination that exudes exclusivity and extraordinary allure amidst the city is The Skyview Hotel. Renowned as an unparalleled lodging spot, this hotel offers a remarkable experience with breathtaking views encompassing the entire city, positioned on the highest floor with wall-to-wall windows. This presence grants guests an exceptional opportunity to witness the city's beauty from a perspective they've never enjoyed before."
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/venue_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Venue Type"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hotel"
+                android:layout_marginTop="7dp"
+                android:textSize="15sp"
+                android:alpha="0.5"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/venue_type_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:alpha="0.5"
+                android:text="Restaurant"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entertainment"
+                android:layout_marginTop="7dp"
+                android:textSize="15sp"
+                android:alpha="0.5"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Live Entertainment"
+                android:layout_marginTop="7dp"
+                android:textSize="15sp"
+                android:alpha="0.5"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/type_of_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="Type of View"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/type_of_view_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="It might surprise you, but this is the only
+revolving restaurant in Las Vegas. Located
+844 feet in the air, you’re bound to get
+a great view of the city with its massive
+floor-to-ceiling windows."
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/facilites"
+                android:layout_marginTop="17dp"
+                android:text="Facilities"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/facilities2"
+                android:text="• Wifi"
+                android:alpha="0.7"
+                android:layout_marginTop="7dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/facilities3"
+                android:text="• Bedroom"
+                android:alpha="0.7"
+                android:layout_marginTop="7dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/facilities10"
+                android:text="• Bathtubs"
+                android:alpha="0.7"
+                android:layout_marginTop="7dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/facilities4"
+                android:text="• Casino"
+                android:alpha="0.7"
+                android:layout_marginTop="7dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/facilities5"
+                android:text="• Bar"
+                android:alpha="0.7"
+                android:layout_marginTop="7dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/facilities6"
+                android:text="• BreakFast"
+                android:alpha="0.7"
+                android:layout_marginTop="7dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/facilities9"
+                android:text="• Coffee"
+                android:alpha="0.7"
+                android:layout_marginTop="7dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/facilities7"
+                android:text="• Pool"
+                android:alpha="0.7"
+                android:layout_marginTop="7dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/facilities8"
+                android:text="• Washer &amp; Dryer"
+                android:alpha="0.7"
+                android:layout_marginTop="7dp"/>
+            <Button
+                android:id="@+id/roadmap_button"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/custom_button"
+                android:drawableEnd="@drawable/ic_steps"
+                android:drawableRight="@drawable/ic_steps"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="BOOK NOW !"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
