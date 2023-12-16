@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_primary"
+    tools:context=".Signup_Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_above="@+id/card_view"
+        android:padding="30dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="323dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo2"></ImageView>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="22dp"
+        android:layout_marginBottom="-15dp"
+        android:id="@+id/card_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi!"
+                android:fontFamily="@font/poppins_extrabold"
+                android:textColor="@color/pink"
+                android:textSize="28sp">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Create a new account"
+                android:textColor="@color/black"
+                android:alpha="0.7">
+            </TextView>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp">
+            </View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:textColor="@color/black"
+                android:alpha="0.7"
+                android:fontFamily="@font/poppins_semibold">
+            </TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:id="@+id/signupfullname">
+            </EditText>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp">
+            </View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:textColor="@color/black"
+                android:alpha="0.7"
+                android:fontFamily="@font/poppins_semibold">
+            </TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:id="@+id/signupemail">
+            </EditText>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp">
+            </View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textColor="@color/black"
+                android:alpha="0.7"
+                android:fontFamily="@font/poppins_semibold">
+            </TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:drawableRight="@drawable/passoff_ic"
+                android:longClickable="false"
+                android:id="@+id/signuppass">
+            </EditText>
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp">
+            </View>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signupbutton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Sign Up"
+                android:textColor="@color/my_secondary"
+                app:cornerRadius="30dp"></com.google.android.material.button.MaterialButton>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp">
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:text="Or Sign Up with:"
+                android:layout_gravity="center"
+                android:alpha="0.7">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/facebook"
+                    android:id="@+id/signupfacebook">
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/search"
+                    android:id="@+id/signupgoogle">
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/instagram">
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Already have an account?"
+                    android:textColor="@color/black"
+                    >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/signinredirect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text=" Sign In"
+                    android:textColor="@color/pink"></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
