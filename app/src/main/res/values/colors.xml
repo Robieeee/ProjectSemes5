@@ -10,4 +10,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorAccent">#ECC131</color>
     <color name="grey">#808080</color>
+    <color name="primary_grey">#B8D3BD</color>
+    <color name="hint_text">#57705E</color>
+    <color name="white_grey">#C3DFC8</color>
 </resources>

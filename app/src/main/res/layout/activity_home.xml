@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_bg"
+    tools:context=".HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topConstraint"
+        android:layout_width="409dp"
+        android:layout_height="163dp"
+        android:background="@color/primary_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/logoTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="43dp"
+            android:fontFamily="@font/brasika"
+            android:text="WanderTrip"
+            android:textColor="@color/primary_text"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/staysBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="100dp"
+            android:backgroundTintMode="src_in"
+            android:text="Stays"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            app:strokeColor="@color/primary_text"
+            app:backgroundTint="#2BD9D9D9"
+            app:elevation="3dp"
+            />
+
+        <Button
+            android:id="@+id/attractionBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTintMode="src_in"
+            android:text="Attractions"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toEndOf="@+id/staysBtn"
+            app:layout_constraintTop_toBottomOf="@+id/logoTV" />
+
+        <Button
+            android:id="@+id/carRentalBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="23dp"
+            android:background="@android:color/transparent"
+            android:backgroundTintMode="src_in"
+            android:text="Car Rental"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/attractionBtn"
+            app:layout_constraintTop_toBottomOf="@+id/chatBtn" />
+
+        <ImageButton
+            android:id="@+id/chatBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="36dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="chat icon"
+            android:padding="10dp"
+            app:layout_constraintStart_toEndOf="@+id/logoTV"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/chat_icon" />
+
+        <ImageButton
+            android:id="@+id/notifBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="36dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="notification icon"
+            android:padding="10dp"
+            app:layout_constraintStart_toEndOf="@+id/chatBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/notif_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemTextColor="@color/navbar_icon_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@color/primary_dark"
+        app:itemIconTint="@color/navbar_icon_color"
+        app:labelVisibilityMode="selected"
+        app:itemIconSize="27dp"
+        app:itemBackground="@android:color/transparent"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.PrimarySurface"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="392dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="347dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topConstraint">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/discountsRV"
+            android:layout_width="390dp"
+            android:layout_height="238dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textVIewww"
+        android:layout_width="355dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="308dp"
+        android:text="Travel more, spend less "
+        android:textColor="@color/primary_grey"
+        android:textSize="22sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topConstraint" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="276dp"
+        android:text="Special for you:"
+        android:textColor="@android:color/white"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topConstraint" />
+
+    <EditText
+        android:id="@+id/search_barET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/searchbar_style"
+        android:drawableLeft="@drawable/searchbar_icon"
+        android:drawablePadding="13dp"
+        android:ems="10"
+        android:hint="LeFonce Hotel, Bali"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textColor="@color/primary_bg"
+        android:textColorHint="@color/hint_text"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topConstraint" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        style="@style/Widget.Material3.Button.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="120dp"
+        android:padding="10dp"
+        android:text="Search"
+        android:textColor="@color/primary_bg"
+        android:textSize="20sp"
+        android:backgroundTint="@color/yellow"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_barET" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
