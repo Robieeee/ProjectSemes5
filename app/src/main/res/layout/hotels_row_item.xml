@@ -1,41 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/primary_bg"
     android:id="@+id/recCard"
-    android:layout_marginStart="12dp"
-    android:layout_marginEnd="12dp"
-    android:layout_marginHorizontal="10dp"
-    android:layout_marginVertical="10dp"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="10dp"
     >
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#CCFFFFFF"
+        android:padding="16dp">
 
-<!--        <com.google.android.material.imageview.ShapeableImageView-->
-<!--            android:layout_width="60dp"-->
-<!--            android:layout_height="90dp"-->
-<!--            android:id="@+id/recImage"-->
-<!--            android:layout_marginStart="20dp"-->
-<!--            android:padding="8dp"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:src="@drawable/booking_icon"-->
-<!--            app:shapeAppearanceOverlay="@style/roundedImageView"-->
-<!--            />-->
+        <ImageView
+            android:id="@+id/hotelImageIV"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_hotel_1"
+            />
 
         <TextView
             android:id="@+id/hotelNameTV"
-            android:layout_width="120dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/hotelImageIV"
             android:text="Hotel Name"
             android:textColor="@color/primary_bg"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/hotelLocationTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hotelNameTV"
+            android:layout_toEndOf="@id/hotelImageIV"
+            android:text="Jakarta, Indonesia"
+            android:textColor="@color/primary_grey"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/hotelPriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hotelLocationTV"
+            android:layout_toEndOf="@id/hotelImageIV"
+            android:text="Rp.3.000.000"
+            android:textColor="@color/primary_bg"
+            android:textSize="16sp" />
+
+        <RatingBar
+            android:id="@+id/hotelRatingRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hotelPriceTV"
+            android:layout_toEndOf="@id/hotelImageIV"
+            android:numStars="5"
+            android:rating="4.5"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:stepSize="0.5" />
 
     </RelativeLayout>
 
