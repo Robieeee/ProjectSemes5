@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,7 +18,7 @@ import com.example.projectsemes5.model.HotelData;
 
 import java.util.List;
 
-public class HotelsAdapter extends RecyclerView.Adapter<MyViewHolder> {
+public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHolder> {
     private Context context;
     private List<HotelData> hotelDataList;
 
@@ -29,17 +30,23 @@ public class HotelsAdapter extends RecyclerView.Adapter<MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.hotels_row_item, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.hotels_row_item, parent, false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-//        Glide.with(context).load(hotelDataList.get(position).getImageUrl()).into(holder.recImage);
-        holder.hotelName.setText(hotelDataList.get(position).getName());
+        HotelData hotel = hotelDataList.get(position);
+        int hotelId = hotel.getImageUrl();
+        int resourceId = context.getResources().getIdentifier("ic_hotel_" + hotelId, "drawable", context.getPackageName());
+
+        holder.hotelName.setText(hotel.getName());
+        holder.hotelLocation.setText(hotel.getLocation());
+        holder.hotelPrice.setText(hotel.getPrice());
+        holder.hotelRB.setRating(hotel.getRating());
+        holder.hotelImg.setImageResource(resourceId);
 
         holder.recCard.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View view) {
                 // pindah ke detail
@@ -51,19 +58,26 @@ public class HotelsAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public int getItemCount() {
         return hotelDataList.size();
     }
-}
 
-class MyViewHolder extends RecyclerView.ViewHolder{
-    ImageView recImage;
-    TextView hotelName;
-    CardView recCard;
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
+        ImageView hotelImg;
+        TextView hotelName, hotelLocation, hotelPrice;
+        RatingBar hotelRB;
+        CardView recCard;
 
-    public MyViewHolder(@NonNull View itemView) {
-        super(itemView);
+        public MyViewHolder(@NonNull View itemView) {
+            super(itemView);
 
-        //recImage = itemView.findViewById(R.id.recImage);
-        hotelName = itemView.findViewById(R.id.hotelNameTV);
-        recCard = itemView.findViewById(R.id.recCard);
+            hotelImg = itemView.findViewById(R.id.hotelImageIV);
+            hotelName = itemView.findViewById(R.id.hotelNameTV);
+            hotelLocation = itemView.findViewById(R.id.hotelLocationTV);
+            hotelPrice = itemView.findViewById(R.id.hotelPriceTV);
+            hotelRB = itemView.findViewById(R.id.hotelRatingRB);
 
+            recCard = itemView.findViewById(R.id.recCard);
+
+        }
     }
 }
+
+

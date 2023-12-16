@@ -12,18 +12,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/searchbar_style"
         android:drawableLeft="@drawable/searchbar_icon"
         android:drawablePadding="13dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_regular"
         android:hint="LeFonce Hotel, Bali"
         android:inputType="text"
-        android:padding="15dp"
+        android:padding="13dp"
+        android:paddingLeft="10dp"
         android:textColor="@color/primary_bg"
         android:textColorHint="@color/hint_text"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,11 +56,11 @@
         app:layout_constraintTop_toBottomOf="@+id/search_barET">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hotelRV"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/hotelRV"
-            android:scrollbars="vertical"
-            />
+            android:paddingBottom="5dp"
+            android:scrollbars="vertical" />
     </LinearLayout>
 
 

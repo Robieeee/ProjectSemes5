@@ -2,10 +2,12 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="8dp"
-    android:background="@color/primary_bg"
+    app:cardBackgroundColor="#99FFFFFF"
     android:id="@+id/recCard"
-    >
+    app:cardCornerRadius="10dp"
+    android:elevation="8dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,8 +21,7 @@
             android:layout_height="120dp"
             android:layout_marginEnd="16dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_hotel_1"
-            />
+            android:src="@drawable/ic_hotel_1" />
 
         <TextView
             android:id="@+id/hotelNameTV"
@@ -29,7 +30,8 @@
             android:layout_toEndOf="@id/hotelImageIV"
             android:text="Hotel Name"
             android:textColor="@color/primary_bg"
-            android:textSize="20sp" />
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/hotelLocationTV"
@@ -37,9 +39,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/hotelNameTV"
             android:layout_toEndOf="@id/hotelImageIV"
+            android:fontFamily="@font/poppins_regular"
             android:text="Jakarta, Indonesia"
-            android:textColor="@color/primary_grey"
-            android:textSize="16sp" />
+            android:textColor="#BF6076"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/hotelPriceTV"
@@ -47,18 +50,33 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/hotelLocationTV"
             android:layout_toEndOf="@id/hotelImageIV"
+            android:fontFamily="@font/poppins_semibold"
             android:text="Rp.3.000.000"
-            android:textColor="@color/primary_bg"
+            android:textColor="#009FB4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/nightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hotelLocationTV"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@id/hotelPriceTV"
+            android:text="/ night"
+            android:textColor="#009FB4"
             android:textSize="16sp" />
 
         <RatingBar
             android:id="@+id/hotelRatingRB"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="42dp"
             android:layout_below="@id/hotelPriceTV"
+            android:layout_marginStart="-61dp"
+            android:layout_marginTop="4dp"
             android:layout_toEndOf="@id/hotelImageIV"
             android:numStars="5"
-            android:rating="4.5"
+            android:progressTint="@color/yellow"
+            android:rating="3"
             android:scaleX="0.5"
             android:scaleY="0.5"
             android:stepSize="0.5" />

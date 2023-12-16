@@ -1,11 +1,12 @@
 package com.example.projectsemes5.model;
 
-public class HotelData {
-    String id, name, location;
-    Integer price, imageUrl;
-    Double rating;
 
-    public HotelData(String id, String name, String location, Integer price, Integer imageUrl, Double rating) {
+public class HotelData {
+    String id, name, location, price;
+    Integer imageUrl;
+    Float rating;
+
+    public HotelData(String id, String name, String location, String price, Integer imageUrl, Float rating) {
         this.id = id;
         this.name = name;
         this.location = location;
@@ -38,11 +39,11 @@ public class HotelData {
         this.location = location;
     }
 
-    public Integer getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -54,11 +55,11 @@ public class HotelData {
         this.imageUrl = imageUrl;
     }
 
-    public Double getRating() {
+    public Float getRating() {
         return rating;
     }
 
-    public void setRating(Double rating) {
+    public void setRating(Float rating) {
         this.rating = rating;
     }
 
