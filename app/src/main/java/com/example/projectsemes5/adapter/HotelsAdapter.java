@@ -1,6 +1,7 @@
 package com.example.projectsemes5.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.projectsemes5.HotelDetails;
 import com.example.projectsemes5.model.HotelData;
 import com.example.projectsemes5.R;
 import com.example.projectsemes5.model.HotelData;
@@ -50,6 +52,12 @@ public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHold
             @Override
             public void onClick(View view) {
                 // pindah ke detail
+                Intent intent = new Intent(context, HotelDetails.class);
+                intent.putExtra("hotelName", hotelDataList.get(holder.getAdapterPosition()).getName());
+                intent.putExtra("hotelRating", hotelDataList.get(holder.getAdapterPosition()).getRating());
+                intent.putExtra("hotelImg", hotelDataList.get(holder.getAdapterPosition()).getImageUrl());
+
+                context.startActivity(intent);
             }
         });
     }

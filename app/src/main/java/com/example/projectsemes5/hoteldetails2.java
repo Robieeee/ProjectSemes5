@@ -13,12 +13,19 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 public class hoteldetails2 extends AppCompatActivity {
     ImageView arrow_down;
     ScrollView scrollView;
     Animation bottomform;
+    Integer resourceId;
+    ImageView header_background;
+    TextView third_title, third_rating_num;
+    RatingBar third_ratingBar;
+
     @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +36,22 @@ public class hoteldetails2 extends AppCompatActivity {
         bottomform = AnimationUtils.loadAnimation(this,R.anim.anim_from_bottom);
         arrow_down.setAnimation(bottomform);
         scrollView.setAnimation(bottomform);
+
+        third_title = findViewById(R.id.third_title);
+        third_rating_num = findViewById(R.id.third_rating_number);
+        third_ratingBar = findViewById(R.id.third_ratingbar);
+        header_background = findViewById(R.id.header_background);
+
+        // ganti data jadi data hotel
+        String name = getIntent().getStringExtra("hotelName");
+        Float rating = getIntent().getFloatExtra("hotelRating", 0);
+        Integer img = getIntent().getIntExtra("hotelImg", 1);
+
+        third_title.setText(name);
+        third_ratingBar.setRating(rating);
+        third_rating_num.setText((rating.toString()));
+        // ini blm ditambahin hehe nanti ya kerjain data mining dulu, soalnya img nya perlu diresize
+        //header_background.setBackgroundResource(resourceId);
 
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,

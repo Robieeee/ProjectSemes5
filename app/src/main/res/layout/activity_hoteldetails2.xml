@@ -54,7 +54,7 @@
                 android:layout_width="395dp"
                 android:layout_height="wrap_content"
                 android:text="Star Hotel, Casino &amp; SkyPod"
-                android:fontFamily="monospace"
+                android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/black"
                 android:textSize="22sp" />
 
@@ -106,6 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="About"
+                android:fontFamily="@font/poppins_medium"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
@@ -117,7 +118,8 @@
                 android:alpha="0.5"
                 android:text="An accommodation destination that exudes exclusivity and extraordinary allure amidst the city is The Skyview Hotel. Renowned as an unparalleled lodging spot, this hotel offers a remarkable experience with breathtaking views encompassing the entire city, positioned on the highest floor with wall-to-wall windows. This presence grants guests an exceptional opportunity to witness the city's beauty from a perspective they've never enjoyed before."
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/venue_type"
@@ -126,13 +128,15 @@
                 android:layout_marginTop="20dp"
                 android:text="Venue Type"
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="14sp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hotel"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
                 android:layout_marginTop="7dp"
-                android:textSize="15sp"
                 android:alpha="0.5"
                 android:textColor="@color/black"/>
 
@@ -144,13 +148,15 @@
                 android:alpha="0.5"
                 android:text="Restaurant"
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"  />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Entertainment"
                 android:layout_marginTop="7dp"
-                android:textSize="15sp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
                 android:alpha="0.5"
                 android:textColor="@color/black"/>
             <TextView
@@ -158,7 +164,8 @@
                 android:layout_height="wrap_content"
                 android:text="Live Entertainment"
                 android:layout_marginTop="7dp"
-                android:textSize="15sp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
                 android:alpha="0.5"
                 android:textColor="@color/black"/>
 
@@ -168,8 +175,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="17dp"
                 android:text="Type of View"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="14sp"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/type_of_view_text"
@@ -182,14 +190,17 @@ revolving restaurant in Las Vegas. Located
 a great view of the city with its massive
 floor-to-ceiling windows."
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:alpha="0.7"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/facilites"
                 android:layout_marginTop="17dp"
                 android:text="Facilities"
-                android:textSize="15sp"/>
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -197,63 +208,81 @@ floor-to-ceiling windows."
                 android:id="@+id/facilities2"
                 android:text="• Wifi"
                 android:alpha="0.7"
-                android:layout_marginTop="7dp"/>
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/facilities3"
                 android:text="• Bedroom"
                 android:alpha="0.7"
-                android:layout_marginTop="7dp"/>
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/facilities10"
                 android:text="• Bathtubs"
                 android:alpha="0.7"
-                android:layout_marginTop="7dp"/>
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/facilities4"
                 android:text="• Casino"
                 android:alpha="0.7"
-                android:layout_marginTop="7dp"/>
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/facilities5"
                 android:text="• Bar"
                 android:alpha="0.7"
-                android:layout_marginTop="7dp"/>
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/facilities6"
                 android:text="• BreakFast"
                 android:alpha="0.7"
-                android:layout_marginTop="7dp"/>
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/facilities9"
                 android:text="• Coffee"
                 android:alpha="0.7"
-                android:layout_marginTop="7dp"/>
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/facilities7"
                 android:text="• Pool"
                 android:alpha="0.7"
-                android:layout_marginTop="7dp"/>
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/facilities8"
                 android:text="• Washer &amp; Dryer"
                 android:alpha="0.7"
-                android:layout_marginTop="7dp"/>
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
             <Button
                 android:id="@+id/roadmap_button"
                 android:layout_width="match_parent"
@@ -265,9 +294,10 @@ floor-to-ceiling windows."
                 android:drawableRight="@drawable/ic_steps"
                 android:paddingLeft="50dp"
                 android:paddingRight="50dp"
-                android:text="BOOK NOW !"
+                android:text="BOOK NOW"
+                android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="17sp" />
 
         </LinearLayout>
 

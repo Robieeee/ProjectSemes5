@@ -2,6 +2,7 @@ package com.example.projectsemes5;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -21,6 +22,8 @@ public class HotelDetails extends AppCompatActivity {
     TextView second_title, second_subtitle, second_rating_number, second_rating_number2, more_details;
     RatingBar second_ratingbar;
     Animation from_left, from_right, from_bottom;
+    ConstraintLayout constraintLayout;
+    Integer resourceId;
     @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +37,25 @@ public class HotelDetails extends AppCompatActivity {
         second_rating_number2 = findViewById(R.id.second_numrate);
         more_details = findViewById(R.id.details);
         second_ratingbar = findViewById(R.id.second_ratingbar);
+        constraintLayout = findViewById(R.id.mainLayout);
 
+        // ganti data jadi data hotel
+        String name = getIntent().getStringExtra("hotelName");
+        Float rating = getIntent().getFloatExtra("hotelRating", 0);
+        Integer img = getIntent().getIntExtra("hotelImg", 1);
 
+        resourceId = getResources().getIdentifier("background_" + img, "drawable", getPackageName());
 
-        second_arrow_up.setOnClickListener(new View.OnClickListener() {
+        second_title.setText(name);
+        second_ratingbar.setRating(rating);
+        second_rating_number.setText((rating.toString()));
+        constraintLayout.setBackgroundResource(resourceId);
+
+        second_back_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(page ini, ke page vanes);
-//                StartActivity(intent);
+                Intent intent = new Intent(HotelDetails.this, SearchActivity.class);
+                startActivity(intent);
             }
         });
         getWindow().setFlags(
@@ -78,6 +92,13 @@ public class HotelDetails extends AppCompatActivity {
                 Pair[] pairs = new Pair[1];
                 pairs[0] = new Pair<View, String>(second_arrow_up,"background_image_transition");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(HotelDetails.this, pairs);
+
+                // passing data
+                intent.putExtra("hotelName", second_title.getText());
+                intent.putExtra("hotelRating", second_ratingbar.getRating());
+                intent.putExtra("hotelImg", resourceId);
+
+
                 startActivity(intent, options.toBundle());
             }
         });

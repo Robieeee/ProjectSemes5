@@ -2,26 +2,27 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HotelDetails"
     android:background="@drawable/background"
     android:transitionName="background_image_transition"
+    tools:context=".HotelDetails"
     tools:targetApi="TIRAMISU">
+
     <ImageView
         android:id="@+id/second_back_arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="34dp"
-        android:layout_marginLeft="34dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="356dp"
-        android:layout_marginRight="356dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:padding="15dp"
         android:src="@drawable/baseline_arrow_back_24"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/second_title"
@@ -29,52 +30,54 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginLeft="18dp"
+        android:layout_marginTop="420dp"
         android:layout_marginEnd="18dp"
         android:layout_marginRight="18dp"
-        android:layout_marginTop="420dp"
+        android:fontFamily="@font/poppins_semibold"
         android:text="Star Hotel, Casino &amp; Skypod"
-        android:fontFamily="monospace"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/second_subtitle"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginStart="18dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginTop="16dp"
         android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
         android:layout_marginRight="18dp"
-        android:alpha="0.5"
-        android:text="Top of the World is known as one of the most romantic restaurants in the city. It offers an inlimate dining setting paired with an extravagant view of the entire city, all encompassed in 360-degree"
+        android:alpha="0.8"
+        android:text="This place is more than a hotel, it is a charming haven, boasts romantic allure and city views. Enjoy intimate dining with a 360-degree cityscape, a perfect blend of modern and fairytale."
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/second_title"
         app:layout_constraintTop_toBottomOf="@+id/second_title" />
+
     <RatingBar
         android:id="@+id/second_ratingbar"
         style="?android:attr/ratingBarStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="-15dp"
         android:layout_marginTop="22dp"
         android:max="5"
         android:numStars="5"
-        android:progressTint = "@color/colorAccent"
         android:progressBackgroundTint="@color/white"
-        android:rating ="4.35"
+        android:progressTint="@color/colorAccent"
+        android:rating="4.35"
         android:stepSize="0.5"
         app:layout_constraintStart_toStartOf="@+id/second_subtitle"
         app:layout_constraintTop_toBottomOf="@+id/second_subtitle"
-        tools:targetApi="TIRAMISU"
-        />
+        tools:targetApi="TIRAMISU" />
+
     <TextView
         android:id="@+id/second_rating_number"
         android:layout_width="wrap_content"
@@ -86,7 +89,7 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@id/second_ratingbar"
-        app:layout_constraintTop_toBottomOf="@id/second_subtitle"/>
+        app:layout_constraintTop_toBottomOf="@id/second_subtitle" />
 
     <TextView
         android:id="@+id/second_numrate"
@@ -98,19 +101,19 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@id/second_rating_number"
-        app:layout_constraintTop_toTopOf="@id/second_rating_number"/>
+        app:layout_constraintTop_toTopOf="@id/second_rating_number" />
 
 
     <ImageView
         android:id="@+id/second_arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="185dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="187dp"
         android:src="@drawable/ic_up_arrow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/second_ratingbar" />
 
@@ -118,8 +121,7 @@
         android:id="@+id/details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="174dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginStart="170dp"
         android:layout_marginBottom="30dp"
         android:text="More Details!"
         android:textColor="@color/white"
@@ -129,10 +131,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/second_arrow"
-        app:layout_constraintVertical_bias="0.0" />
-
-    
-
+        app:layout_constraintVertical_bias="0.153"
+        android:fontFamily="@font/poppins_regular"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
