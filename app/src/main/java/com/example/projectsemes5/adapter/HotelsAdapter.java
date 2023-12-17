@@ -38,7 +38,7 @@ public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHold
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         HotelData hotel = hotelDataList.get(position);
         int hotelId = hotel.getImageUrl();
-        int resourceId = context.getResources().getIdentifier("ic_hotel_" + hotelId, "drawable", context.getPackageName());
+        int resourceId = context.getResources().getIdentifier("hotel_" + hotelId, "drawable", context.getPackageName());
 
         holder.hotelName.setText(hotel.getName());
         holder.hotelLocation.setText(hotel.getLocation());

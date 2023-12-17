@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/discounts_icon" />
@@ -49,7 +49,8 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/discount_icon"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/poppins_medium"/>
 
         <TextView
             android:id="@+id/titleTV"
@@ -60,7 +61,7 @@
             android:text="Special 15% discount for your stays"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semibold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/discount_icon" />
 
@@ -70,6 +71,7 @@
             android:layout_height="39dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="Only available on 15-25th of December! Grab it fast!"
             android:textColor="@color/yellow"
             android:textSize="14sp"

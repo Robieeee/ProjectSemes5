@@ -34,11 +34,13 @@ public class HomeActivity extends AppCompatActivity {
         stayBtn = findViewById(R.id.staysBtn);
         stayBtn.setPressed(true);
 
+        String name = "Hi, " + getIntent().getStringExtra("userName");
+
         // Recyler view
         List<DiscountsData> discountsDataList = new ArrayList<>();
-        discountsDataList.add(new DiscountsData("Hi, Zeta!" , "Special 15% discount for your stays", "Only available on 15-25th of December! Grab it fast!", R.drawable.discounts_icon));
-        discountsDataList.add(new DiscountsData("Hi, Zeta!" , "Special 40% discount for your car rentals", "Only available on 15-25th of December! Grab it fast!", R.drawable.discounts_icon));
-        discountsDataList.add(new DiscountsData("Hi, Zeta!" , "Special 35% discount for your flights", "Only available on 15-25th of December! Grab it fast!", R.drawable.plane_icon));
+        discountsDataList.add(new DiscountsData(name , "Special 15% discount for your stays", "Only available on 15-25th of December! Grab it fast!", R.drawable.discounts_icon));
+        discountsDataList.add(new DiscountsData("Go go go!" , "Special 40% discount for your car rentals", "Only available on 15-25th of December! Grab it fast!", R.drawable.car_icon));
+        discountsDataList.add(new DiscountsData("Where to?" , "Special 35% discount for your flights", "Only available on 15-25th of December! Grab it fast!", R.drawable.plane_icon));
         setDiscountsRecycler(discountsDataList);
 
         // Go to search

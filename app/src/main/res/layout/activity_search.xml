@@ -20,8 +20,10 @@
         android:fontFamily="@font/poppins_regular"
         android:hint="LeFonce Hotel, Bali"
         android:inputType="text"
-        android:padding="13dp"
-        android:paddingLeft="10dp"
+        android:paddingRight="13dp"
+        android:paddingLeft="13dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="9dp"
         android:textColor="@color/primary_bg"
         android:textColorHint="@color/hint_text"
         android:textSize="18sp"
@@ -59,7 +61,8 @@
             android:id="@+id/hotelRV"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="5dp"
+            android:layout_marginBottom="30dp"
+            android:padding="15dp"
             android:scrollbars="vertical" />
     </LinearLayout>
 

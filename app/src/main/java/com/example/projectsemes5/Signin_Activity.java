@@ -50,7 +50,8 @@ public class Signin_Activity extends AppCompatActivity {
                             @Override
                             public void onSuccess(AuthResult authResult) {
                                 Toast.makeText(Signin_Activity.this, "Signin Successful", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(Signin_Activity.this, HomeActivity.class));
+                                String name = getIntent().getStringExtra("userName");
+                                startActivity(new Intent(Signin_Activity.this, HomeActivity.class).putExtra("userName", name));
                                 finish();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
