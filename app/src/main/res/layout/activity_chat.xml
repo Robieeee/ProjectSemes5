@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:src="@drawable/shape"
+        android:id="@+id/header"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/pesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Message The Property !"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        tools:layout_editor_absoluteX="-16dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        tools:layout_editor_absoluteY="96dp" />
+    <TextView
+        android:id="@+id/pesan2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your host or staff hotel at the property can answer any questions about your upcoming trip. Be patient !"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        tools:layout_editor_absoluteX="-16dp"
+        app:layout_constraintTop_toBottomOf="@id/pesan"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="42dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="14dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="27dp"
+        android:text="Messages"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:tint="#FFFFFFFF"
+        app:layout_constraintStart_toStartOf="@id/imageButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pesanhotel1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/shape2"
+        app:layout_constraintTop_toBottomOf="@id/pesan2"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/gambar"
+        android:layout_width="104dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/background"
+        app:layout_constraintStart_toStartOf="@+id/pesanhotel1"
+        app:layout_constraintTop_toTopOf="@id/pesanhotel1" />
+
+    <TextView
+        android:layout_width="195dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="Star Hotel, Casino &amp; Skypod "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/gambar"
+        app:layout_constraintTop_toTopOf="@id/pesanhotel1" />
+
+
+    <TextView
+        android:layout_width="193dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="8 Januari - 18 Januari 2024"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/gambar"
+        app:layout_constraintTop_toTopOf="@id/pesanhotel1" />
+
+    <ImageView
+        android:id="@+id/pesanhotel2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey"
+        android:src="@drawable/shape2"
+        app:layout_constraintTop_toBottomOf="@id/pesanhotel1"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/gambar2"
+        android:layout_width="104dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/background"
+        app:layout_constraintStart_toStartOf="@+id/pesanhotel2"
+        app:layout_constraintTop_toTopOf="@id/pesanhotel2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="195dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="Star Hotel, Casino &amp; Skypod "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/gambar2"
+        app:layout_constraintTop_toTopOf="@id/pesanhotel2" />
+
+    <TextView
+        android:layout_width="195dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:text="15 Januari - 28 Januari 2024 "
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/gambar2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toTopf="@id/pesanhotel2" />
+
+
+    <ImageView
+        android:id="@+id/pesanhotel3"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey"
+        android:src="@drawable/shape2"
+        app:layout_constraintTop_toBottomOf="@id/pesanhotel2"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/gambar3"
+        android:layout_width="104dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/background"
+        app:layout_constraintStart_toStartOf="@+id/pesanhotel3"
+        app:layout_constraintTop_toTopOf="@id/pesanhotel3" />
+
+    <TextView
+        android:layout_width="195dp"
+        android:id="@+id/textview3"
+        android:layout_height="21dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="14dp"
+        android:text="Star Hotel, Casino &amp; Skypod "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/gambar3"
+        app:layout_constraintTop_toTopOf="@id/pesanhotel3" />
+
+    <TextView
+        android:layout_width="195dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:text="15 Januari - 28 Januari 2024 "
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/gambar3"
+        app:layout_constraintTop_toBottomOf="@+id/textview3"
+        app:layout_constraintTop_toTopf="@id/pesanhotel3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
