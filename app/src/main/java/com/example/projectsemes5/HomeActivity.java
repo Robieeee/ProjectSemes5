@@ -33,6 +33,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         stayBtn = findViewById(R.id.staysBtn);
         stayBtn.setPressed(true);
+        chatIcon = findViewById(R.id.chatBtn);
 
         String name = "Hi, " + getIntent().getStringExtra("userName");
 
@@ -56,7 +57,17 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(goToSearch);
             }
         });
+
+        chatIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent chat = new Intent(HomeActivity.this,chatActivity.class);
+                startActivity(chat);
+            }
+        });
     }
+
+
 
     private void setDiscountsRecycler(List<DiscountsData> discountsDataList){
 
