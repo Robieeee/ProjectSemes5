@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChatActivity">
+    tools:context=".chatActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -148,8 +148,7 @@
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/gambar2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintTop_toTopf="@id/pesanhotel2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
     <ImageView
@@ -188,12 +187,10 @@
         android:layout_width="195dp"
         android:layout_height="21dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="1dp"
-        android:text="15 Januari - 28 Januari 2024 "
+        android:layout_marginTop="4dp"
+        android:text="30 Januari - 12 Februari 2024 "
         android:textColor="@color/black"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/gambar3"
-        app:layout_constraintTop_toBottomOf="@+id/textview3"
-        app:layout_constraintTop_toTopf="@id/pesanhotel3" />
-
+        app:layout_constraintStart_toEndOf="@id/gambar3"
+        app:layout_constraintTop_toBottomOf="@id/textview3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

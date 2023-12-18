@@ -3,11 +3,9 @@ package com.example.projectsemes5;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 
-import com.example.projectsemes5.R;
-
-public class ChatActivity extends AppCompatActivity {
-
+public class chatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
