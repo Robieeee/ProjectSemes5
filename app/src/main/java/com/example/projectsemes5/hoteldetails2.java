@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class hoteldetails2 extends AppCompatActivity {
     ImageView arrow_down;
@@ -26,6 +27,7 @@ public class hoteldetails2 extends AppCompatActivity {
     ImageView header_background;
     TextView third_title, third_rating_num;
     RatingBar third_ratingBar;
+    Button roadmap_button;
 
     @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
     @Override
@@ -37,6 +39,7 @@ public class hoteldetails2 extends AppCompatActivity {
         bottomform = AnimationUtils.loadAnimation(this,R.anim.anim_from_bottom);
         arrow_down.setAnimation(bottomform);
         scrollView.setAnimation(bottomform);
+        roadmap_button = findViewById(R.id.roadmap_button);
 
         third_title = findViewById(R.id.third_title);
         third_rating_num = findViewById(R.id.third_rating_number);
@@ -79,7 +82,15 @@ public class hoteldetails2 extends AppCompatActivity {
                 startActivity(intent, options.toBundle());
             }
         });
-
+        
+        roadmap_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(hoteldetails2.this, HomeActivity.class);
+                Toast.makeText(hoteldetails2.this, "Booking successful!", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+        });
 
     }
 }

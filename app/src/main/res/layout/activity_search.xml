@@ -7,7 +7,7 @@
     android:background="@color/primary_bg"
     tools:context=".SearchActivity">
 
-    <EditText
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/search_barET"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -17,16 +17,19 @@
         android:drawableLeft="@drawable/searchbar_icon"
         android:drawablePadding="13dp"
         android:ems="10"
+        android:queryHint="LeFonce Hotel, Bali"
+        android:iconifiedByDefault="false"
         android:fontFamily="@font/poppins_regular"
         android:hint="LeFonce Hotel, Bali"
         android:inputType="text"
-        android:paddingRight="13dp"
-        android:paddingLeft="13dp"
-        android:paddingTop="13dp"
-        android:paddingBottom="9dp"
         android:textColor="@color/primary_bg"
         android:textColorHint="@color/hint_text"
         android:textSize="18sp"
+        app:queryBackground="@android:color/transparent"
+        app:queryHint="LeFonce Hotel, Bali"
+        app:iconifiedByDefault="false"
+        app:searchIcon="@drawable/searchbar_icon"
+        app:defaultQueryHint="LeFonce Hotel, Bali"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

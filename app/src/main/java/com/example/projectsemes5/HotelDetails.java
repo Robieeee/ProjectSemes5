@@ -13,12 +13,15 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
 public class HotelDetails extends AppCompatActivity {
-    ImageView second_back_arrow, second_arrow_up;
+    ImageView second_arrow_up;
+
+    ImageButton second_back_arrow;
     TextView second_title, second_subtitle, second_rating_number, second_rating_number2, more_details;
     RatingBar second_ratingbar;
     Animation from_left, from_right, from_bottom;

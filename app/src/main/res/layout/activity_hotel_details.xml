@@ -10,7 +10,7 @@
     tools:context=".HotelDetails"
     tools:targetApi="TIRAMISU">
 
-    <ImageView
+    <ImageButton
         android:id="@+id/second_back_arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,6 +18,8 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="356dp"
         android:padding="15dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="back icon"
         android:src="@drawable/baseline_arrow_back_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
@@ -109,30 +111,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="185dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="187dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="185dp"
+        android:padding="2dp"
         android:src="@drawable/ic_up_arrow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/second_ratingbar" />
+        app:layout_constraintTop_toBottomOf="@id/second_subtitle" />
 
     <TextView
         android:id="@+id/details"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="170dp"
-        android:layout_marginBottom="30dp"
-        android:text="More Details!"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="    More Details!"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/second_arrow"
-        app:layout_constraintVertical_bias="0.153"
-        android:fontFamily="@font/poppins_regular"/>
+        app:layout_constraintTop_toBottomOf="@+id/second_arrow" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

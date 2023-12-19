@@ -18,6 +18,7 @@ import com.example.projectsemes5.model.HotelData;
 import com.example.projectsemes5.R;
 import com.example.projectsemes5.model.HotelData;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHolder> {
@@ -65,6 +66,11 @@ public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHold
     @Override
     public int getItemCount() {
         return hotelDataList.size();
+    }
+
+    public void searchData(ArrayList<HotelData> searchList){
+        hotelDataList = searchList;
+        notifyDataSetChanged();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{

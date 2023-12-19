@@ -2,7 +2,7 @@ package com.example.projectsemes5;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,7 +24,7 @@ import java.util.List;
 
 public class SearchActivity extends AppCompatActivity {
 
-    EditText searchET;
+    SearchView searchET;
     RecyclerView recyclerView;
     DatabaseReference database;
     HotelsAdapter adapter;
@@ -42,8 +42,8 @@ public class SearchActivity extends AppCompatActivity {
         searchET = findViewById(R.id.search_barET);
         Intent ambilData = getIntent();
         String searchedKey = ambilData.getStringExtra("searchedKeyId");
-        searchET.setText(searchedKey);
-        searchedKey = searchET.getText().toString();
+        searchET.setQuery(searchedKey, true);
+        searchET.clearFocus();
 
 //      // Recycler view
         recyclerView = findViewById(R.id.hotelRV);
@@ -71,6 +71,9 @@ public class SearchActivity extends AppCompatActivity {
                 }
 
                 adapter.notifyDataSetChanged();
+                if(!searchedKey.isEmpty()){
+                    searchList(searchedKey);
+                }
             }
 
             @Override
@@ -79,7 +82,29 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
 
+        searchET.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
 
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                searchList(newText);
+                return true;
+            }
+        });
+
+    }
+
+    public void searchList(String text){
+        ArrayList<HotelData> searchList = new ArrayList<>();
+        for(HotelData hd : hotelDataList){
+            if(hd.getName().toLowerCase().contains(text.toLowerCase())){
+                searchList.add(hd);
+            }
+        }
+        adapter.searchData(searchList);
     }
 
     public void backOnClick(){

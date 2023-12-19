@@ -1,6 +1,7 @@
 package com.example.projectsemes5;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,7 +24,7 @@ public class HomeActivity extends AppCompatActivity {
     ImageView chatIcon;
     RecyclerView discountsRecycler;
     DiscountsAdapter discountsAdapter;
-    EditText searchET;
+    SearchView searchET;
 
 
 
@@ -51,7 +52,7 @@ public class HomeActivity extends AppCompatActivity {
         searchBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                String searchedKey = searchET.getText().toString();
+                String searchedKey = searchET.getQuery().toString();
                 Intent goToSearch = new Intent(HomeActivity.this, SearchActivity.class);
                 goToSearch.putExtra("searchedKeyId", searchedKey);
                 startActivity(goToSearch);
