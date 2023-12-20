@@ -26,7 +26,7 @@ public class HotelDetails extends AppCompatActivity {
     RatingBar second_ratingbar;
     Animation from_left, from_right, from_bottom;
     ConstraintLayout constraintLayout;
-    Integer resourceId;
+    Integer resourceId, img;
     @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +45,7 @@ public class HotelDetails extends AppCompatActivity {
         // ganti data jadi data hotel
         String name = getIntent().getStringExtra("hotelName");
         Float rating = getIntent().getFloatExtra("hotelRating", 0);
-        Integer img = getIntent().getIntExtra("hotelImg", 1);
+        img = getIntent().getIntExtra("hotelImg", 1);
 
         resourceId = getResources().getIdentifier("background_" + img, "drawable", getPackageName());
 
@@ -99,7 +99,7 @@ public class HotelDetails extends AppCompatActivity {
                 // passing data
                 intent.putExtra("hotelName", second_title.getText());
                 intent.putExtra("hotelRating", second_ratingbar.getRating());
-                intent.putExtra("hotelImg", resourceId);
+                intent.putExtra("hotelImg", img);
 
 
                 startActivity(intent, options.toBundle());

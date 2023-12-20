@@ -26,7 +26,8 @@
         android:layout_marginLeft="15dp"
         tools:layout_editor_absoluteX="-16dp"
         app:layout_constraintTop_toBottomOf="@id/header"
-        tools:layout_editor_absoluteY="96dp" />
+        tools:layout_editor_absoluteY="96dp"
+        android:fontFamily="@font/poppins_medium"/>
     <TextView
         android:id="@+id/pesan2"
         android:layout_width="match_parent"
@@ -36,18 +37,21 @@
         android:textSize="15sp"
         android:layout_marginTop="7dp"
         android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginLeft="15dp"
         tools:layout_editor_absoluteX="-16dp"
         app:layout_constraintTop_toBottomOf="@id/pesan"
-        tools:layout_editor_absoluteY="96dp" />
+        tools:layout_editor_absoluteY="96dp"
+        android:fontFamily="@font/poppins_regular"/>
 
     <ImageButton
         android:id="@+id/Buttonback"
-        android:layout_width="42dp"
-        android:layout_height="44dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="13dp"
         android:background="#00FFFFFF"
+        android:contentDescription="back icon"
         android:src="@drawable/baseline_arrow_back_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -63,7 +67,8 @@
         android:textColor="@color/white"
         android:tint="#FFFFFFFF"
         app:layout_constraintStart_toStartOf="@id/Buttonback"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/poppins_medium"/>
 
     <ImageView
         android:id="@+id/pesanhotel1"
@@ -91,9 +96,10 @@
         android:layout_marginTop="12dp"
         android:text="Star Hotel, Casino &amp; Skypod "
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="13sp"
         app:layout_constraintStart_toEndOf="@+id/gambar"
-        app:layout_constraintTop_toTopOf="@id/pesanhotel1" />
+        app:layout_constraintTop_toTopOf="@id/pesanhotel1"
+        android:fontFamily="@font/poppins_medium"/>
 
 
     <TextView
@@ -105,7 +111,8 @@
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/gambar"
-        app:layout_constraintTop_toTopOf="@id/pesanhotel1" />
+        app:layout_constraintTop_toTopOf="@id/pesanhotel1"
+        android:fontFamily="@font/poppins_regular"/>
 
     <ImageView
         android:id="@+id/pesanhotel2"
@@ -135,7 +142,8 @@
         android:layout_marginTop="12dp"
         android:text="Star Hotel, Casino &amp; Skypod "
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_medium"
         app:layout_constraintStart_toEndOf="@+id/gambar2"
         app:layout_constraintTop_toTopOf="@id/pesanhotel2" />
 
@@ -146,6 +154,7 @@
         android:layout_marginTop="1dp"
         android:text="15 Januari - 28 Januari 2024 "
         android:textColor="@color/black"
+        android:fontFamily="@font/poppins_regular"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/gambar2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -179,7 +188,8 @@
         android:layout_marginTop="14dp"
         android:text="Star Hotel, Casino &amp; Skypod "
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_medium"
         app:layout_constraintStart_toEndOf="@+id/gambar3"
         app:layout_constraintTop_toTopOf="@id/pesanhotel3" />
 
@@ -189,6 +199,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:text="30 Januari - 12 Februari 2024 "
+        android:fontFamily="@font/poppins_regular"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@id/gambar3"

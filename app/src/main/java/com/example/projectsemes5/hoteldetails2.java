@@ -51,11 +51,12 @@ public class hoteldetails2 extends AppCompatActivity {
         Float rating = getIntent().getFloatExtra("hotelRating", 0);
         Integer img = getIntent().getIntExtra("hotelImg", 1);
 
+        resourceId = getResources().getIdentifier("header_" + img, "drawable", getPackageName());
+
         third_title.setText(name);
         third_ratingBar.setRating(rating);
         third_rating_num.setText((rating.toString()));
-        // ini blm ditambahin hehe nanti ya kerjain data mining dulu, soalnya img nya perlu diresize
-        //header_background.setBackgroundResource(resourceId);
+        header_background.setImageResource(resourceId);
 
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
