@@ -5,4 +5,4 @@ WanderTrip is an application that can help users find a hotel based on preferenc
 WanderTrip also provides an In-App-Chat feature where users and hotel providers can easily communicate about bookings. And there is information about the environment around the place of the hotel such as attractions, transportation etc.
 
 Here's how the app looks like:
-https://www.canva.com/design/DAF3aFDDrrk/CA-o2lKkMu4xZo6XLQ8LTg/edit
+https://www.canva.com/design/DAF3aFDDrrk/U5I0G0Rii-hXvJ5dvSvcQA/view?utm_content=DAF3aFDDrrk&utm_campaign=designshare&utm_medium=link&utm_source=editor
